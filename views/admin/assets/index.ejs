@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alohan | Minimalist Fashion HTML Template</title>
+
+    <meta name="author" content="themesflat.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+    <link rel="shortcut icon" href="/icon/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/icon/favicon%402x.html">
+
+</head>
+
+<body>
+    <div id="wrapper" class="header-fixed">
+        <div id="page" class="clearfix">
+
+            <div id="site-header-wrap">
+
+                <header id="site-header" class="style-2">
+                    <div id="site-header-inner" class="themesflat-container">
+                        <a href="#" class="btn-search-left"><i class="Alohan-icon-search"></i> </a>
+                        <div id="site-logo" class="clearfix">
+                            <div id="site-log-inner">
+                                <a href="index-2.html" rel="home" class="main-logo">
+                                    <img src="/img/logo.png" alt="Alohan">
+                                </a>
+                            </div>
+                        </div><!-- /#site-logo -->
+
+
+                        <nav id="main-nav" class="main-nav">
+                            <ul id="menu-primary-menu" class="menu">
+                                <li class="menu-item menu-item-has-children current-menu-item">
+                                    <a href="index.html">HOME</a>
+
+                                </li>
+                                <li class="menu-item menu-item-has-children ">
+                                    <a href="about.html">ABOUT US </a>
+
+                                </li>
+                                <li class="menu-item menu-item-has-children ">
+                                    <a>SHOP</a>
+
+                                </li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="blog-standard.html">BLOG</a>
+
+                                </li>
+                                <li class="menu-item ">
+                                    <a href="contact.html">CONTACT</a>
+                                </li>
+                            </ul>
+                        </nav><!-- /#main-nav -->
+
+                        <ul class="menu-socical-icon">
+                            <li><a href="../admin/list.ejs"> <i class="Alohan-icon-login"></i> </a></li>
+                            <li><a href="wish-list.html"><i class="Alohan-icon-wishlish"></i> </a></li>
+                            <li><a href="shop-full-3-col.html"><i class="Alohan-icon-cart"></i> </a></li>
+                        </ul>
+                        <form method="get" class="header-search-form style-2" action="#">
+                            <input type="text" value="" name="s" class="header-search-field" placeholder="Search...">
+                            <button type="submit" class="header-search-submit" title="Search"><i
+                                    class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </header>
+            </div>
+
+
+
+            <!-- Main Content -->
+            <div id="main-content" class="site-main clearfix">
+
+                <section class="slider style-2 bg-slider-3">
+                    <div class="slider-inner">
+                        <div class="swiper-container slider-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="swiper-content">
+                                        <h6 class="caption">SUMMER SALE 2020</h6>
+                                        <h1 class="heading">Lookbook <span>Collection</span></h1>
+
+                                        <a href="shop-full-3-col.html" class="button color-1">EXPLORE NOW</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-content">
+                                        <h6 class="caption">SUMMER SALE 2020</h6>
+                                        <h1 class="heading">Lookbook <span>Collection</span></h1>
+
+                                        <a href="shop-full-3-col.html" class="button color-1">EXPLORE NOW</a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-content">
+                                        <h6 class="caption">SUMMER SALE 2020</h6>
+                                        <h1 class="heading">Lookbook <span>Collection</span></h1>
+
+                                        <a href="shop-full-3-col.html" class="button color-1">EXPLORE NOW</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination-slider"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="product themesflat-section style-2">
+                    <div class="themesflat-container">
+                        <h3 class="themesflat-heading wow fadeInUp">Featured Products
+                            <a href="shop-full-4-col.html" class="view-all-product">View all Products</a>
+                        </h3>
+                        <div class="container mt-4">
+                            <div class="row">
+                                <% products.forEach((p) => { %>
+                                    <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
+                                        <div class="card h-100">
+                                            <img src="<%= p.image %>" class="card-img-top" alt="<%= p.name %>" style="height: 200px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><%= p.name %></h5>
+                                                <p class="card-text">Giá: <%= p.price %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </section>
+
+        <section class="banner">
+            <div class="themesflat-container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="banner-content bg-left style-2 wow fadeInLeft">
+                            <h4><a href="#" class="heading">50% ALL PRODUCTS</a></h4>
+                            <div class="date">Sale Off</div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="banner-content bg-right wow fadeInRight">
+                            <div class="date">Fashion</div>
+                            <h2 class="tittle">Clothing</h2>
+                            <a href="#" class="btn-discover">DISCOVER</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="latesnew themesflat-section">
+            <div class="themesflat-container">
+                <h3 class="themesflat-heading text-center latesnew-heading">Latest News</h3>
+                <div class="latesnew-inner">
+                    <div class="latesnew-item">
+                        <article class="blog-post  wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                            <div class="post-img">
+                                <a href="blog-detail.html"><img src="/img/post/post-10.jpg" alt="Image"></a>
+                                <a href="blog-detail.html" class="post-day">MAY 15, 2020</a>
+                            </div>
+                            <div class="post-meta style-1">
+                                <div class="author">BY JOHNNY ROBBINS</div>
+                                <div class="category"><a href="blog-standard.html">FASHION</a></div>
+                            </div>
+                            <h4 class="post-title"><a href="blog-detail.html">1 Thing All Good Hair Days Have In
+                                    Common</a></h4>
+                        </article>
+                    </div>
+                    <div class="latesnew-item">
+                        <article class="blog-post  wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1000ms">
+                            <div class="post-img">
+                                <a href="blog-detail.html"><img src="/img/post/post-11.jpg" alt="Image"></a>
+                                <a href="blog-detail.html" class="post-day">MAY 15, 2020</a>
+                            </div>
+                            <div class="post-meta style-1">
+                                <div class="author">BY JOHNNY ROBBINS</div>
+                                <div class="category"><a href="blog-standard.html">FASHION</a></div>
+                            </div>
+                            <h4 class="post-title"><a href="blog-detail.html">Swimspo Roundup – My Favorite Swimsuit
+                                    Trends</a></h4>
+                        </article>
+                    </div>
+                    <div class="latesnew-item">
+                        <article class="blog-post end wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1000ms">
+                            <div class="post-img">
+                                <a href="blog-detail.html"><img src="/img/post/post-12.jpg" alt="Image"></a>
+                                <a href="blog-detail.html" class="post-day">MAY 15, 2020</a>
+                            </div>
+                            <div class="post-meta style-1">
+                                <div class="author">BY JOHNNY ROBBINS</div>
+                                <div class="category"><a href="blog-standard.html">FASHION</a></div>
+                            </div>
+                            <h4 class="post-title"><a href="blog-detail.html">Mother’s Day Gift Bag Ideas Mom Will
+                                    Love</a></h4>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="instagram themesflat-section">
+            <div class="themesflat-container">
+                <div class="themesflat-heading text-center instagram-heading style-2 wow fadeInUp">
+                    <h3>Find us on Instagram</h3>
+                    <h4><a href="mailto:themesflat@gmail.com">@alohan</a></h4>
+                </div>
+                <div class="swiper-container swiper-slider instagram-slider wow fadeInUp">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="instagram-item">
+                                <a href="#"><img src="/img/instagram/instagram-1.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-item">
+                                <a href="#"><img src="/img/instagram/instagram-2.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-item">
+                                <a href="#"><img src="/img/instagram/instagram-3.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-item">
+                                <a href="#"><img src="/img/instagram/instagram-4.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="instagram-item">
+                                <a href="#"><img src="/img/instagram/instagram-5.jpg" alt="Image"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newletter style-1">
+            <div class="themesflat-container">
+                <div class="newletter-inner text-center wow fadeInUp">
+                    <h3 class="heading">Stay in the Know!</h3>
+                    <p class="content">Be the first to know about new arrivals, look books, sales & promos!</p>
+                    <form action="#" method="get" class="subcribe-form">
+                        <input type="email" class="subcribe-field" placeholder="Enter your email" title="subcribe for"
+                            required>
+                        <button class="subcribe-submit">SUBSCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefit themesflat-section style-2">
+            <div class="themesflat-container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="benefit-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
+                            <div class="benefit-img">
+                                <img src="/img/benefit/benefit-loan.png" alt="Image">
+                            </div>
+                            <div class="benefit-title">
+                                <a href="#">FAST & FREE DELIVERY > $299</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="benefit-box wow fadeInUp  mg1" data-wow-delay="300ms" data-wow-duration="1000ms">
+                            <div class="benefit-img">
+                                <img src="/img/benefit/benefit-liquidity.png" alt="Image">
+                            </div>
+                            <div class="benefit-title">
+                                <a href="#"> DAYS FREE 7-11 / SF RETURNS</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="benefit-box cash wow fadeInUp margin-left-36" data-wow-delay="600ms"
+                            data-wow-duration="1000ms">
+                            <div class="benefit-img margin-top-2">
+                                <img src="/img/benefit/benefit-credit-card.png" alt="Image">
+                            </div>
+                            <div class="benefit-title">
+                                <a href="#">CASH ON DELIVERY</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="benefit-box online wow fadeInUp margin-left-31" data-wow-delay="900ms"
+                            data-wow-duration="1000ms">
+                            <div class="benefit-img margin-right-16">
+                                <img src="/img/benefit/benefit-support.png" alt="Image">
+                            </div>
+                            <div class="benefit-title">
+                                <a href="#">ONLINE SUPPORT 24/7</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div><!-- /#main-content -->
+
+
+    <footer id="footer">
+        <div class=" themesflat-container">
+            <div class="row">
+                <div class="col-md-4 ">
+                    <div class="widget widget-infor">
+                        <p class="address">101 E 129th St, East Chicago, IN 46312, US</p>
+                        <div class="phone"><a href="tel:+001-1234-88888"> Phone: 001-1234-88888</a></div>
+                        <div class="email"><a href="mailto:themesflat@gmail.com">Email: info.deercreative@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="widget widget-logo">
+                        <div class="logo-dark">
+                            <a href="index-2.html"><img src="/img/logo-dark.png" alt="Image" class="logo"></a>
+                        </div>
+                        <ul class="list-icon-socical">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="widget widget-link">
+                        <ul class="list-link ">
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="blog-standard.html">Blogs</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                        </ul>
+                        <ul class="list-link">
+                            <li><a href="login.html">Login</a></li>
+                            <li><a href="wish-list.html">Wish List</a></li>
+                            <li><a href="checkout.html">Check Out</a></li>
+                            <li><a href="checking-order.html"><span>Orders Tracking</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom">
+        <div class="themesflat-container">
+            <ul class="bottom-menu">
+                <li class="menu-item"><a href="#">Privacy Policy</a></li>
+                <li class="menu-item"><a href="#">Terms & Conditions</a> </li>
+                <li class="menu-item"><a href="#">Site Map</a></li>
+                <li class="menu-item">
+                    <div class="coppy-right">
+                        Copyright © 2021 The Alohan | Minimalist Fashion HTML Template. Designed by <a
+                            href="https://themeforest.net/user/themesflat/portfolio"> Themesflat</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    </div><!-- /#page -->
+    </div><!-- /#wrapper -->
+
+    <a id="scroll-top"></a>
+
+
+    <!-- Javascript -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/wow.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/swiper.js"></script>
+    <script type="text/javascript" src="/js/shortcodes.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
+
+</body>
+
+<!-- Mirrored from themesflat.co/html/alohan/home3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Jul 2024 14:44:36 GMT -->
+
+</html>
